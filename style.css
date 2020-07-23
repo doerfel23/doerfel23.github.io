@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;}
+/*alle Elemente werden automatisch vorskaliert*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;}
+/*Wenn keine Arial dann Helv., wenn keine Helv. dann sans-serif;kein Außenabstand */
+
+body h3 {font-family: 'Bebas Neue', cursive; letter-spacing: 0.1rem;}
+/*die aus google.fonts geladene Schrift kann hier oder auch direkt im body eingebunden werden*/
+
+a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 3;}
+/*alle Links sind schwarz, fett und nicht unterstrichen, Zeilenhöhe: 3*/
+
+ul {
+  list-style-type: none; /*alle Listenelemente ohne Pkte*/
+  padding: 0;} /*alle Listen haben automatisch padding-left: 40px, das muss entsprechend genullt werden*/
+
+button {
+  background-color: transparent;
+  border: none;}
+/*das Burgermenü ist transp., ohne Rahmen*/
+
+#Hauptmenü {
+  display: none;}
+/*das aufgeklappte Hauptmenü ist Mobile nicht sichtbar*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  /*das Logo und das Burgermenü sind auf der gleichen Ebene mit Abstand*/
+  height: 5rem;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+/*Höhe: 5rem=80px, Innenabstand: 5% vom gesamten Header*/
+  padding: 1rem; /*Innenabstand rundherum nachjustiert*/
+  position: fixed;
+  top: 0;
+  left: 0; 
+/*läuft beim Scrollen fix mit*/
+  background: white;}
+
+#intro {
+  background-image: 
+/*code:linear-gradient(90deg, rgba(0,0,0,0.5) 0%,rgba(32,31,31,0.5)100%),
+>>gestappeltes Hintergrundbild - hier: Farbverlauf über bg-img* mit KOMMA getrennt*/ url("img/intro.jpg");
+  height: 100vh;
+  /*Hintergrundbild wird eingefügt, Höhe so hoch wie Display*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*der BG wiederholt sich nicht mehr, zieht sich über gesamtes Display, ist zentriert*/
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;}
+/*Inhalte des Intro werden zentriert von allen Seiten dargestellt*/
+
+#intro p,
+#intro h1 {
+  color: white;}
+/*formatiert alle Schriften im Intro*/
+
+.knopf {
+  color: #374a67;
+  background: white;
+  border: 1px solid #374a67;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px -3px rgba(0,0,0,0.75);}
+/*formatierung button, farben/rand/innenabstand/schatten*/
+
+.knopf:hover {
+  color: white;
+  background: #374a67;
+  transition: all 0.5s;}
+/*farbwechsel beim darüber schweben mit der Maus + Geschwindigkeit*/
+
+#Hauptmenü.show {
+  display: block;
+/*das Hauptmenü wird mit Klick angezeigt, das Burgermenü steht li. daneben
+ ACHTUNG: kein Leerzeichen zwischen #Hauptmenü und .show !*/
+  position: fixed; /*läuft beim Scrollen fix mit*/
+  text-align: center;
+  top: 5rem; /*so hoch wie der Header */
+  left: 0;
+  z-index: 1;
+/*nach dem Klicken ist das Menü richtig positioniert*/
+  height: 100vh; /*passt sich an Viewporthöhe an*/
+  width: 100%; /*ist so breit wie gesamter Display*/
+  background-color: white;}
+
+h2 {text-align: center;color: #374a67; text-transform: initial;}
+
+.card {border: 0.5px #374a67 solid;padding-bottom: 2rem; margin: 1rem; text-align: center;
+  border-radius: 1.5%;overflow: hidden;
+  /*abgerundete Ecken, überstehendes bspw. das Bild wird abgeschnitten*/
+  box-shadow: -2px 10px 20px -9px rgba(0,0,0,0.75)}
+
+.card .knopf {color: white; background: #374a67; text-transform: uppercase; padding: unset;
+              display: block; margin: 1rem;} /*dadurch wird der Knopf so lang wie der Container + Außenabstand*/
+.card .knopf:hover {
+  color: #374a67;
+  background: white;
+  transition: all 0.5s;}
+/*der Button für die Class .card ist gleich dem bereits angelegten, nur Farben sind umgekehrt*/
+
+.card img {display: block; width: 100%;}
+/*das Bild nimmt immer die Größe des Elternteils an (.card) responsive*/
+
+.card a {color: #374a67; text-transform: none; font-weight: unset;}
+/*gesamter Linktext wird formatiert */
+.card p a {color: #828282;  text-transform: none; line-height: 20px; display: block}
+/*spezifischerer Selektor Class + inneres Element + äußeres Element*/
+/*durch display:block nimmt der Text bspw. margin - Einstellung an*/
+
+form button {display: block}
+/*macht den Button sichtbar, da am Anfang alle Buttons (Burgermenü) ausgeblendet wurden*/
+
+#newsletter {display: block; background: #04122B; color: white; text-align: center;padding: 3rem;}
+/*Formatierung gesamter Container mit Nebeninfos*/
+#newsletter form {display: flex; justify-content: center; margin-top: 2.5rem;}
+/*Ausrichtung Formular (input+button)*/
+/*TIPP: wenn viele Elemente mit Flexbox dargestellt werden sollen, könnte man eine Klasse  nur mit
+display:flexbox definieren, welche man den Elementen entsprechend zuweist*/
+#newsletter form .knopf {text-transform: uppercase; font-weight: bold; font-size: 12px;}
+/*Formatierung Knopf*/
+#newsletter input {border-radius: 5px;width: 250px;}
+/*Ecken werden noch abgerundet und Weite angepasst*/
+/*TIPP: Ecken können auch einzeln angesteuert werden > bspw. border-top-left-radius */
+
+#legal_menu ul {text-align: center;} /*Text mittig >> text-align weil Schriftart*/
+
+#social_menu ul {display: flex; justify-content: center;} /*icons stehen nebeneinander, mittig*/
+#social_menu li {margin: 20px; font-size: 45px} /*Abstand + Größe >> hier Fontsize weil keine img sondern Schriftart*/
+
+
+@media (min-width: 768px) {
+  /*MediaQuery für größere Displays*/
+
+  button {
+    display: none;
+  }
+  /*das Burgermenü ist auf großen Displays nicht sichtbar*/
+
+  #Hauptmenü {
+    display: block;
+  }
+  /*das ausgeklappte Hauptmenü (mit allen Links) ist für größere Bildschirme sichtbar*/
+
+  #Hauptmenü ul {
+    display: flex;
+  }
+  /*die Links des Burgermenüs stehen nebeneinander (nur im Hauptmenü)*/
+
+  #Hauptmenü li {
+    margin-left: 20px;
+  }
+  /*die Links des Burgermenüs haben einen weiteren Abstand nach rechts (nur im Hauptmenü)*/
+
+  .wrapper {display: flex;}
+  /*die Karten werden auf dem Handy untereinander gezeigt*/
+
+  #basic_footer {display: flex; justify-content: space-between; align-items: center; padding: 30px;}
+  /*social und legal menu des footer stehen mit Abstand nebeneinander und auf einer Linie*/
+  
+  #legal_menu ul {display: flex; justify-content: space-between;} /*Element nebeneinander mit Abstand*/
+  #legal_menu li {margin: 20px} /*Abstand nach außen*/
+ 
+  #Hauptmenü.show {position: static;} /*wenn ein kleiner Display groß gezogen wird, passt sich das 
+  Wortmenü angepasst >> müsste noch formatiert werden*/
+}

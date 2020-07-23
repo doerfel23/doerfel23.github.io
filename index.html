@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--definiert Buchstabenset-->
+        <title>BTA Kochen</title>
+        <meta name="description" content="Leckere Rezepte für tolle Leute...">
+        <!-- Abstract - Kurzbeschreibung der Website -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bildschirmgröße + Scale für versch. Devices-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="fonts/icons.css"> <!--nachträglich eingebundenes Stylesheet für Icons im Footer-->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+        <!--aus google.fonts über embed geladene Schriftart > hier: Bebas Neue >> Achtung: müsste ggf. im Datenschutz angegeben werden-->
+    </head>
+    
+    <body>
+      <header>
+          <a href="index.html">
+         <!--mit Platzhalter # oder index.html(loop)-->
+              <img src="img/logo.png" alt="zur Startseite" width="40"></a>
+              <!--nur width > height wird proportional mit skaliert-->
+          <button>
+              <img src="img/menu.svg" alt="Menü" width="60"></button>
+          <nav id=Hauptmenü>
+              <ul class="Menü_re">
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">receipts</a></li>
+                  <li><a href="#">categories</a></li>
+                  <li><a href="#">about us</a></li>
+             </ul></nav>
+      </header>
+
+      <main>
+        <section id="intro">
+            <div>
+                <h1>Die besten Rezepte für Webworker</h1>
+                <p>Es gibt mehr als Pizza & Ravioli</p>
+                <a class="knopf" href="#rezepte">Entdecke die Leckereien</a>
+                <!--"#rezepte" ist eine Sprungmarke auf Inhalt in gleicher Page, ID muss weiter untern vergeben sein-->
+            </div>
+        </section>
+     <!--1. Sektion im Hauptteil Intro mit BG-Img, Text und Button-->
+        <section id="rezepte"> <!--Sprungmarke in intro gesetzt-->
+            <h2>Die neuesten Rezepte</h2> 
+            <div class="wrapper">
+                <article class="card">
+                <!--=ein für sich selbst stehender Inhalt-->
+                    <a href="#">
+                        <img src="img/pizza.jpg" alt="Pizza auf Brett"></a>
+                    <h3>
+                        <a href="#">Total leckere Pizza</a></h3>
+                    <p>
+                        <a href="#">Lorem ipsum, dolor sit amet consectetur a dipisicing elit. Ea, iusto. Ipsam natus neque maiores porro, deleniti distinctio voluptatibus delectus quae.</a></p>
+                    <!--bei Text egal ob einfach oder H1,2,3 etc. kommt der Link <a> nach innen-->
+
+                    <a class="knopf" href="#">Zum Rezept</a>
+                <!--Inhalt gesamter Card wird verlinkt damit es einfacher für user wird-->
+                </article>
+                <article class="card">
+                    <!--=ein für sich selbst stehender Inhalt-->
+                        <a href="#">
+                            <img src="img/farfalle.jpg" alt="Farfalle"></a>
+                        <h3>
+                            <a href="#">Total leckere Pastagerichte</a></h3>
+                        <p>
+                            <a href="#">Lorem ipsum, dolor sit amet consectetur a dipisicing elit. Ea, iusto. Ipsam natus neque maiores porro, deleniti distinctio voluptatibus delectus quae.</a></p>
+                        <!--bei Text egal ob einfach oder H1,2,3 etc. kommt der Link <a> nach innen-->
+    
+                        <a class="knopf" href="#">Zum Rezept</a>
+                    <!--Inhalt gesamter Card wird verlinkt damit es einfacher für user wird-->
+                </article>
+                <article class="card">
+                        <!--=ein für sich selbst stehender Inhalt-->
+                            <a href="#">
+                                <img src="img/reispfanne-lissabon.jpg" alt="Reispfanne Lissabon"></a>
+                            <h3>
+                                <a href="#">Total leckere Reisgerichte</a></h3>
+                            <p>
+                                <a href="#">Lorem ipsum, dolor sit amet consectetur a dipisicing elit. Ea, iusto. Ipsam natus neque maiores porro, deleniti distinctio voluptatibus delectus quae.</a></p>
+                            <!--bei Text egal ob einfach oder H1,2,3 etc. kommt der Link <a> nach innen-->
+        
+                            <a class="knopf" href="#">Zum Rezept</a>
+                        <!--Inhalt gesamter Card wird verlinkt damit es einfacher für user wird-->
+                </article>
+                <article class="card">
+                            <!--=ein für sich selbst stehender Inhalt-->
+                                <a href="#">
+                                    <img src="img/pancakes.jpg" alt="Pancakes"></a>
+                                <h3>
+                                    <a href="#">Total leckere Desserts</a></h3>
+                                <p>
+                                    <a href="#">Lorem ipsum, dolor sit amet consectetur a dipisicing elit. Ea, iusto. Ipsam natus neque maiores porro, deleniti distinctio voluptatibus delectus quae.</a></p>
+                                <!--bei Text egal ob einfach oder H1,2,3 etc. kommt der Link <a> nach innen-->
+            
+                                <a class="knopf" href="#">Zum Rezept</a>
+                            <!--Inhalt gesamter Card wird verlinkt damit es einfacher für user wird-->
+                </article>
+            </div>
+        </section>
+     <!--2. Sektion im Haupttail Rezeptkarten - alles Links-->
+
+      </main>
+     <!--Nebenkontent über Footer-->
+      <aside id="newsletter"> <!--Nebenkontent, newsletter benannt-->
+        <p>Kein Rezept mehr verpassen</p>
+        <p>Hol dir unseren Newsletter</p>
+        <form action="E-Mail">
+            <input type="email" name="email" id="email" placeholder=" Deine Emailadresse"> <!--Platzhaltertext wird in Eingabefeld gesetzt-->
+            <button class="knopf" type="submit">Abonnieren</button>
+        </form>
+        <!--Formular mit Eingabefeld und submit-Button-->
+      </aside>
+
+      <footer id="basic_footer">
+          <nav id="legal_menu"> <!--bei Verlinkungen zur Navigation besser <nav> verwenden-->
+            <ul> <!--bei Listen immer mit <ul> und <li> arbeiten-->
+                <li>
+                    <a href="#">Impressum</a></li>
+                <li>
+                    <a href="#">Datenschutz</a></li>
+                <li>
+                    <a href="#">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav id="social_menu">
+            <ul> 
+                <li class="icon-facebook"> <!--siehe Styleshee icons.css Schriftschnipsel als Class einfügen-->
+                    <a href="https://www.facebook.com" target="_blank"></a></li> <!--anstatt # dann gesamter Link (https://) zur bspw. FB-Site-->
+                <li class="icon-instagram" >                                               <!--mit target="blank" öffnet sich der Link in einem neuen Tab-->
+                    <a href="https://www.instagram.com" target="_blank"></a></li>
+                <li class="icon-youtube">
+                    <a href="https://www.youtube.com" target="_blank"></a></li>
+            </ul>
+          </nav>
+      </footer>
+
+      <script src="js/menu.js"></script>
+      <!--javascript wird eingebunden >> Verknüpfung zw Burgerbutton u. Hauptmenü mit Klassen-->
+    </body>
+</html>
